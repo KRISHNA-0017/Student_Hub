@@ -1,0 +1,22 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML element styles */
+html {
+  font-family: monospace;
+  font-size: 2.5rem;
+}
+
+/* Body element styles */
+body {
+  min-height: 100vh;
+  background-color: black;
+  color: whitesmoke;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}

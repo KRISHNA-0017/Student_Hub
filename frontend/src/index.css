@@ -1,0 +1,110 @@
+/* Base Tailwind CSS styles */
+@tailwind base;
+/* Component styles */
+@tailwind components;
+@tailwind utilities;
+/* Import Google Fonts - Spectral SC */
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap");
+
+/* Custom CSS for HTML */
+@layer html {
+  :root {
+    --toastify-color-light: #ed3a3a;
+    --toastify-text-color-light: #d95353;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    display: block;
+  }
+
+  /* Apply text-wrap: balance to elements with the class .text-balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Style for select inputs with a background image */
+  .select-img {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(65, 84, 98)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center right 1px;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+  }
+
+  .radio:has(input:checked) {
+    color: #f41919;
+    font-weight: bold;
+  }
+
+  select:disabled {
+    background-image: none;
+  }
+
+  /* Styling for elements with the class .outlet-border */
+  .outlet-border {
+    border-color: #020617;
+    border-width: 4px;
+    border-radius: 0.75rem;
+  }
+
+  /* Styling for active links in the navigation */
+  #nav a.active {
+    background-color: #f02a14;
+    border-radius: 0.375rem;
+  }
+
+  #register a.active {
+    color: #f6665c !important;
+  }
+
+  #resister #root .toast {
+    color: #651810 !important;
+  }
+  #root .toast-body {
+    color: #651e10 !important;
+  }
+  #root .toast-rounded {
+    border-radius: 6px !important;
+    background-color: #fae2e0 !important;
+  }
+
+  .scrollWidth:-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollWidth {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* #root .toast-progress {
+    background: #6d28d9 !important;
+  } */
+
+  @media (prefers-color-scheme: dark) {
+    #nav a.active {
+      background-color: #d93428;
+      border-radius: 0.375rem;
+    }
+    #register a.active {
+      color: #951d1d;
+    }
+    option {
+      background-color: #e1cdcb;
+      color: #2a110f;
+    }
+    #root .toast {
+      color: #fae0e0 !important;
+    }
+    #root .toast-body {
+      color: #fae5e0 !important;
+    }
+    #root .toast-rounded {
+      border-radius: 6px !important;
+      background-color: #2e1065 !important;
+    }
+  }
+}
